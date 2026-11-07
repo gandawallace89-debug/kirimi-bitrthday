@@ -1,1 +1,72 @@
-# kirimi-bitrthday
+<!DOCTYPE html>
+    <html lang="eng">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Kirimi's birthday</title>
+            <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+            <style>
+                body{
+                    background-color:#7b919c;
+                    min-height:100vh;
+                    margin:0;
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    justify-content:center;
+                }
+                section{
+                    background-color:#989daa;
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    justify-content:center;
+                    border-radius:10px;
+                    padding:30px;
+                    box-shadow:0 0 10px white;
+                }
+                .head{
+                    font-family:PT Serif, serif;
+                    font-size:2em;
+                    color:white;
+                }
+                h2{
+                    font-family:PT Serif, serif;
+                    font-size:1.5em;
+                    color:white;
+                }
+                button{
+                    background-color:#0f3d3e;
+                    color: aliceblue;
+                    font-family:PT Serif, serif;
+                    font-weight: 900;
+                    border:0px solid;
+                    border-radius:20px;
+                    padding:10px 20px;
+                    cursor:pointer;
+                    box-shadow:
+                    inset -6px -6px -12px black,
+                    inset -6px -6px -12px white,
+                    3px 3px 14px #0f7d7e
+                    -6px 6px 16px rgb(223, 211, 211);
+                }
+                button:hover{
+                    background-color: #7fb3b8;
+                    transition-delay:  1.2s ease;
+                }
+
+            </style>
+        </head>
+        <body>
+            <header>
+                <section>
+                    <span class="head"><h1>HAPPY BIRTHDAY 🥳🎂</h1></span>
+                    <h2>To my Queen LAUREEN 🥰</h2>
+                    <a href="kirimi2.html" target="_blank">
+                        <button>Open your gift</button>
+                    </a>
+                </section>
+            </header>
+            
+        </body>
+    </html>
