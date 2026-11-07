@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirimi's birthday</title>
+    <script src="https://kit.fontawesome.com/f7139d27f4.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background:linear-gradient(#f9a8d4,#fce7f3);
+            min-height:100vh;
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        span{
+            font-family:serif ;
+            color:goldenrod;
+            font-size: larger;
+        }
+        button{
+            font-family:PT Serif, serif;
+            border: 0px solid;
+            width: 60px;
+            height: 40px;
+            margin-top: 50px;
+            border-radius:20px;
+            padding:10px 20px;
+            cursor:pointer;
+            transition: transform 2s ease;
+        }
+        button:hover{
+                    box-shadow:0 0 10px white;
+                    background-color: #f9a8d4;
+                    transform:scale(1.2);
+                   
+         }
+         section{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            padding:70px;
+            background-image:url(kirimipics.webp);
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+            box-shadow:0px 0px 2px black;
+         }
+         .no{
+            font-size: medium;
+            margin-right:30px;
+         }
+         nav{
+            display: flex;
+         }
+         .bottom{
+            position: fixed;
+            bottom: 20px;
+            left:20px;
+            place-items: center;
+            display: grid;
+            width: 44px;
+            height: 44px;
+            color: #6d0d3f;
+            background-color: white;
+            border-radius: 50%;
+            text-decoration: none;
+         }
+         .gift-back-button{
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            display: grid;
+            place-items: center;
+            width: 44px;
+            height: 44px;
+            color: #6d0d3f;
+            background-color: white;
+            border-radius: 50%;
+            text-decoration: none;
+         }
+        
+
+    </style>
+</head>
+<body>
+    <a class="gift-back-button" href="kirimi3.html" aria-label="Go to the gift page">
+       <i class="fa-solid fa-arrow-right-long"></i>
+    </a>
+    <main>
+        <section>
+            <span><h1>Do you want to see your gift👀?</h1></span>
+            <nav>
+                <button class="no">NO</button>
+                <button class="yes">YES</button>
+            </nav>
+            <p id="p1"></p>
+        </section>
+    <div>
+            <a href="kirimi1.html" target="_blank">
+            <button class="bottom"><i class="fa-solid fa-arrow-left-long"></i></button>
+            
+            
+        </a>
+    </div>
+    </main>
+    <script>
+        document.querySelector(".no").addEventListener("click", () => {
+            document.getElementById("p1").textContent = "No is not an option";
+        });
+        document.querySelector(".yes").addEventListener("click", () => {
+            document.getElementById("p1").textContent = "Yay! Your gift is waiting for you! click the button below ";
+        });
+    </script>
+</body>
+</html>

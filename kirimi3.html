@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/f7139d27f4.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url(pinkbg.webp);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .containor{
+            width:600px;
+            height: 500px;
+            perspective: 1000px;
+        }
+        .card{
+            width: 100%;
+            height: 100%;
+            transition: 2s ease;
+            position:relative;
+            transform-style: preserve-3d;
+        }
+        .card.is-flipped{
+            transform: rotateY(180deg);
+        }
+        .front{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display:grid;
+            place-items: center;
+            background-color: pink;
+            color:#6d0d3f;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            padding:20px;
+            background-image: url(butterfly.webp);
+        }
+        .back{
+           position: absolute;
+           transform: rotateY(180deg);
+           background-color: rgb(249, 61, 93);
+           width:100%;
+           height:100%;
+           display:grid;
+           backface-visibility:hidden;
+           place-items: center;
+           border-radius: 20px;
+           background-image: url(kitten.webp);
+           padding: 20px;
+           font-size:larger;
+           color:#5b4bff;
+           box-shadow: #ec4899;
+           
+        }
+
+        button{
+            margin-top: 60px;
+            padding: 10px 18px;
+            cursor: pointer;
+            border:0px solid;
+            border-radius: 5px;
+           
+        }
+        button:hover{
+            background-color: #e6e0ff;
+        }
+
+        .back-button{
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: grid;
+            place-items: center;
+            width: 44px;
+            height: 44px;
+            color: #6d0d3f;
+            background-color: white;
+            border-radius: 50%;
+            text-decoration: none;
+        }
+           
+    </style>
+
+</head>
+<body>
+    <a class="back-button" href="kirimi2.html" aria-label="Back to Kirimi's birthday page">
+        <i class="fa-solid fa-arrow-left-long" aria-hidden="true"></i>
+    </a>
+    <section class="containor">
+        <div class="card">
+            <div class="front"><h1>Hii👋 Laureen? This is a small letter from Wallace to you🥰. </h1></div>
+            <div class="back"><i>Hii <strong>queen </strong>👸, hope you are doing well? I just wanted to wish you a splendid 
+                birthday, even though we have only known each other for a short while I am ever greatfull to have your company
+                and I also hope it will stay like this through our three🤙 academic years in school and even after we graduate🎓
+                (I will always root for your sucess queen 🌞 and 🌙). But above all I hope you enjoy your day.Nivile umenipata nikiwa broke ningekuspoil 😹 lkn si kuna next time ama 😁?I know the letter 
+                is short but I meant everything 💝you Queen. <br><br><br>from wallace  </i> </div>
+        </div>
+    </section>
+    <button type="button" id="flip-button" aria-pressed="false">Show back</button>
+
+    <script>
+        const card = document.querySelector(".card");
+        const flipButton = document.querySelector("#flip-button");
+
+        flipButton.addEventListener("click", () => {
+            const isFlipped = card.classList.toggle("is-flipped");
+            flipButton.textContent = isFlipped ? "Show front" : "Show back";
+            flipButton.setAttribute("aria-pressed", String(isFlipped));
+        });
+    </script>
+</body>
+</html>
